@@ -1,1 +1,3 @@
-# React_autumn2020
+# Boxes excercise.
+
+First, very basic component creation and rendering task.
