@@ -1,9 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-const greeting = 'Yey!';
-const personalGreeting = 'Way to go (wo)man!';
 
 /* Making component for boxes */
 function Box(props) {
@@ -12,20 +8,19 @@ function Box(props) {
       <p>{props.name}</p>
       <p>Title: {props.title}</p>
       <p>Age: {props.age}</p>
-      {personalGreeting}
     </div>
   );
 }
 
 /* all below will be shown on the page */
-
 function App() {
   return (
     <div className="App">
-      {greeting}
-      <Box name="Vilma" title="CEO, Lead Dev" age="42" />
-      <Box name="Eino" title="QA Lead" age="9" />
-      <Box name="Ville" title="Fullstack Dev" age="9" />
+      <Box name="Vilma" title="Future Web Developer" age="Young at heart" />
+      <Box name="K.E.I." title="Curious Scientist" age="Forever young" />
+      <Box name="E.O.V.I." title="Explorer" age="10" />
+      <Box name="V.O.E.I." title="Tester" age="10" />
+      <Box name="Nelli The Dog" title="Entertainer" age="1" />
     </div>
   );
 }
