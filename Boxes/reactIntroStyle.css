@@ -1,0 +1,22 @@
+body {
+  background-color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: teal;
+  margin: 2rem;
+}
+
+p {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+p.firstName {
+  font-weight: bold;
+}
