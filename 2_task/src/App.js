@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Animals from './Animal component/Animal';
 
 function Content() {
   return (
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Content />
+      <Animals />
     </div>
   );
 }
