@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
   state = {
     animals: [
-      { name: 'Snowy Owl', image: 'https://source.unsplash.com/DvZpQRpirlo' },
+      { name: 'Snowy Owl', image: 'https://source.unsplash.com/E3XUdw2ohd4' },
       { name: 'Meerkat', image: 'https://source.unsplash.com/FQjmQgSoRyQ' },
       { name: 'Field Mouse', image: 'https://source.unsplash.com/ocFm38bEyTE' },
     ],
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="cards">
         <Animal
           name={this.state.animals[0].name}
-          image={this.state.animals[0]}
+          image={this.state.animals[0].image}
         />
         <Animal
           name={this.state.animals[1].name}
