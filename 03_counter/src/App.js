@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { likes: 0 };
+
+  //method to add likes
+  addHandler = () => {
+    this.setState({ likes: this.state.likes + 1 });
+  };
+  //method to remove likes
+  removeHandler = () => {
+    this.setState({ likes: this.state.likes - 1 });
+  };
+  //method for reseting likes
+  resetHandler = () => {
+    this.setState({ likes: 0 });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Total Likes:{this.state.likes}</h1>
+        <button onClick={this.addHandler}>Add one</button>
+        <button onClick={this.removeHandler}>Remove one</button>
+        <button onClick={this.resetHandler}>Reset</button>
+      </div>
+    );
+  }
 }
 
 export default App;
