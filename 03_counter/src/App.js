@@ -2,33 +2,46 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = { likes: 0 };
-
-  //method to add likes
+  //current time is added as state inside same {} as count:0
+  state = { count: 0, curTime: new Date().toDateString() };
+  //method to add count, will set number that is +1 bigger than current
   addHandler = () => {
-    this.setState({ likes: this.state.likes + 1 });
+    this.setState({ count: this.state.count + 1 });
   };
-  //method to remove likes. Math.max prevents -values. Math.max return the bigger of two values, if value <0, returns 0
+  //method to remove count. If prevents -values.
   removeHandler = () => {
-    this.setState((prevState) => ({ likes: Math.max(prevState.likes - 1, 0) }));
+    if (this.state.count <= 0) {
+      return;
+    }
+    this.setState({ count: this.state.count - 1 });
   };
-  //method for reseting likes
+  //method for reseting count
   resetHandler = () => {
-    this.setState({ likes: 0 });
+    this.setState({ count: 0 });
   };
 
   render() {
+    const isEven = this.state.count % 2 === 0;
     return (
       <div>
         <header>
-          <h1>Count your... whatever</h1>
+          <div id="date">Date: {this.state.curTime}</div>
+          <h1>Count your ...whatever</h1>
         </header>
-        <h2>Total: {this.state.likes}</h2>
-        <button onClick={this.addHandler}>Add one</button>
-        <button onClick={this.removeHandler}>Remove one</button>
-        <button onClick={this.resetHandler}>Reset</button>
+        <main
+          style={{
+            backgroundColor:
+              isEven % 2 === 0 ? 'rgb(174, 101, 114)' : 'rgb(175, 125, 140)',
+          }}
+          className={isEven ? 'even' : 'odd'}
+        >
+          <h2>Total: {this.state.count}</h2>
+          <button onClick={this.addHandler}>Add one</button>
+          <button onClick={this.removeHandler}>Remove one</button>
+          <button onClick={this.resetHandler}>Reset</button>
+        </main>
         <footer>
-          <p>Copyright&copy; VW 2020</p>
+          <p>Copyright&copy; Vilma Ikonen 2020</p>
         </footer>
       </div>
     );
