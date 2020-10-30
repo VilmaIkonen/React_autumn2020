@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Article extends Component {
+  state = { votes: 0 };
+  addHandler = () => {
+    this.setState({ votes: this.state.votes + 1 });
+  };
   render() {
     return (
       <div>
@@ -15,6 +19,9 @@ class Article extends Component {
           practical in comparison to academic studies. The studies focus 100% on
           getting the core skills needed as software developer.
         </p>
+        <div id="votes">{this.state.votes} people like this article</div>
+        <button onClick={''}>Read more</button>
+        <button onClick={this.addHandler}>Give a vote</button>
       </div>
     );
   }
