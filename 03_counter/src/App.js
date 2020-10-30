@@ -7,9 +7,9 @@ class App extends Component {
   addHandler = () => {
     this.setState({ likes: this.state.likes + 1 });
   };
-  //method to remove likes
+  //method to remove likes. Math.max prevents -values. Math.max return the bigger of two values, if value <0, returns 0
   removeHandler = () => {
-    this.setState({ likes: this.state.likes - 1 });
+    this.setState((prevState) => ({ likes: Math.max(prevState.likes - 1, 0) }));
   };
   //method for reseting likes
   resetHandler = () => {
