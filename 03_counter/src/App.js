@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   state = { likes: 0 };
@@ -19,10 +20,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Total Likes:{this.state.likes}</h1>
+        <header>
+          <h1>Count your... whatever</h1>
+        </header>
+        <h2>Total: {this.state.likes}</h2>
         <button onClick={this.addHandler}>Add one</button>
         <button onClick={this.removeHandler}>Remove one</button>
         <button onClick={this.resetHandler}>Reset</button>
+        <footer>
+          <p>Copyright&copy; VW 2020</p>
+        </footer>
       </div>
     );
   }
