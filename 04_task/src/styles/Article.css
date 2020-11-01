@@ -7,13 +7,24 @@ div {
   background-color: var(--backgroundColor);
   color: var(--fontColor);
   padding: 2rem;
+  height: 60vh;
 }
 
 img {
   width: 100%;
+  max-height: 50%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .votes,
 .buttons {
   background-color: var(--backgroundColor);
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
 }

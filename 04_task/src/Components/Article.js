@@ -11,8 +11,8 @@ class Article extends Component {
       <div className="container">
         <img
           alt="colourful laptop on dark bakground"
-          src="https://source.unsplash.com/u76CN5rZeOU"
-        ></img>
+          src="https://source.unsplash.com/u76CN5rZeOU/"
+        />
         <h2>Full Stack Web Developer program</h2>
         <p>
           Full Stack Web Developer program is designd for adults who want to
