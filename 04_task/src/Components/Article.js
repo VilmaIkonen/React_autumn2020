@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Article.css';
 
 class Article extends Component {
   state = { votes: 0 };
@@ -7,7 +8,7 @@ class Article extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="container">
         <img
           alt="colourful laptop on dark bakground"
           src="https://source.unsplash.com/u76CN5rZeOU"
@@ -19,9 +20,11 @@ class Article extends Component {
           practical in comparison to academic studies. The studies focus 100% on
           getting the core skills needed as software developer.
         </p>
-        <div id="votes">{this.state.votes} people like this article</div>
-        <button onClick={''}>Read more</button>
-        <button onClick={this.addHandler}>Give a vote</button>
+        <div className="votes">{this.state.votes} people like this article</div>
+        <div className="buttons">
+          <button onClick={''}>Read more</button>
+          <button onClick={this.addHandler}>Give a vote</button>
+        </div>
       </div>
     );
   }

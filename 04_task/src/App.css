@@ -1,0 +1,17 @@
+:root {
+  --backgroundColor: rgb(90, 10, 34);
+  --fontColor: rgb(252, 229, 229);
+  --font: 'Roboto', sans-serif;
+}
+
+#root {
+  padding: 0;
+}
+
+* {
+  font-family: var(--font);
+}
+
+.content {
+  padding: 0;
+}

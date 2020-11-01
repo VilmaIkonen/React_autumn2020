@@ -1,0 +1,19 @@
+div {
+  background-color: white;
+  padding: 1rem;
+}
+
+.container {
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
+  padding: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.votes,
+.buttons {
+  background-color: var(--backgroundColor);
+}

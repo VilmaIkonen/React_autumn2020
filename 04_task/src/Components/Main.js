@@ -4,9 +4,7 @@ import Article from './Article';
 const Main = () => {
   return (
     <div>
-      <div className="container">
-        <Article />
-      </div>
+      <Article />
     </div>
   );
 };
