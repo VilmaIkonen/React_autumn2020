@@ -1,2 +1,2 @@
 # 4_task Article
-![Article](./src/Screenshot.png)
+![Article](src/Screenshot.png)
