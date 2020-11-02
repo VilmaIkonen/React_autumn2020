@@ -1,0 +1,23 @@
+.animalCards {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
+  height: 300px;
+  width: 250px;
+}
+
+.animalCards h1 {
+  text-align: center;
+}
+
+.animalCards img {
+  object-position: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.animalCards button {
+  padding: 0.5rem;
+  font-weight: bold;
+}
