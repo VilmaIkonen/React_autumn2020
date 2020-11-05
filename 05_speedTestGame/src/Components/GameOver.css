@@ -18,10 +18,17 @@
     display: grid;
     justify-items: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .gameover_box button {
     position: absolute;
     top: 5px;
     right: 5px;
+}
+
+@media (max-width: 576px) {
+    .gameOverBox {
+        width: 60%;
+    }
 }

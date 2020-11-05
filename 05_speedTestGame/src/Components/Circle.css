@@ -28,3 +28,11 @@
 .circle.active {
     background-color: #f0dfdf; /* define here if eg. image used on active (as background image) */
 }
+
+
+@media (max-width: 576px) {
+    .circle{
+        height:100px;
+        width: 100px;
+    }
+}
