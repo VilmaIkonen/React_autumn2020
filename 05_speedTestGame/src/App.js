@@ -16,10 +16,10 @@ class App extends Component {
     current: 0,
     showGameOver: false,
     circles:[
-      {id:1, color:"green"},
-      {id:2, color:"red"},
-      {id:3, color:"blue"},
-      {id:4, color:"orange"}
+      {id:1, color:"color1"},
+      {id:2, color:"color2"},
+      {id:3, color:"color3"},
+      {id:4, color:"color4"}
     ],
   }
   

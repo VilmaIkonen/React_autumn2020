@@ -19,6 +19,7 @@
     justify-items: center;
     align-items: center;
     border-radius: 5px;
+    padding: 1rem;
 }
 
 .gameover_box button {

@@ -3,26 +3,25 @@
     height:150px;
     width: 150px;
     border-radius: 50%;
-    background-color: tomato;
     margin:2rem;
     box-shadow: 0 0 15px #333;
     cursor: pointer;
 }
 
-.green {
-    background-color: green;
+.color1 {
+    background-color: #05A1FB;
 }
 
-.red {
-    background-color: red;
+.color2 {
+    background-color: #0905fb;
 }
 
-.blue {
-    background-color: blue;
+.color3 {
+    background-color: #8987ee;
 }
 
-.yellow {
-    background-color: yellow;
+.color4 {
+    background-color:#3a88ee;
 }
 
 .circle.active {
