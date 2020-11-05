@@ -1,0 +1,26 @@
+.circle{
+    display: inline-block;
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: tomato;
+    margin:2rem;
+    box-shadow: 0 0 15px #333;
+    cursor: pointer;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}

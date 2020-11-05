@@ -1,0 +1,21 @@
+/* use of  Google fonts in React: as @import + font-family in body */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nova Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: limegreen;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+button{
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 0 0 10px #747474;  
+  text-transform: uppercase;
+}
