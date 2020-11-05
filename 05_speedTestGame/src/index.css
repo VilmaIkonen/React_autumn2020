@@ -6,7 +6,7 @@ body {
   font-family: 'Nova Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: limegreen;
+  background-color: #bfd1db;
   background-attachment: fixed;
   text-align: center;
 }
@@ -18,4 +18,6 @@ button{
   margin: 1rem;
   box-shadow: 0 0 10px #747474;  
   text-transform: uppercase;
+  background-color: teal;
+
 }

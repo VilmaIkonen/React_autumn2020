@@ -9,18 +9,22 @@
     cursor: pointer;
 }
 
-.green{
+.green {
     background-color: green;
 }
 
-.red{
+.red {
     background-color: red;
 }
 
-.blue{
+.blue {
     background-color: blue;
 }
 
-.yellow{
+.yellow {
     background-color: yellow;
+}
+
+.circle.active {
+    background-color: #f0dfdf; /* define here if eg. image used on active (as background image) */
 }
