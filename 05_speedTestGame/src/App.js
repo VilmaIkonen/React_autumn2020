@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Circle from './Components/Circle'
+import Footer from './Components/Footer'
 import GameOver from './Components/GameOver'
 import './App.css'
 
@@ -108,13 +109,12 @@ class App extends Component {
         <h1>Fast enough to catch the owl?</h1>
         <h2>Click the owl when it opens the eyes</h2>
         <p>Your score: {this.state.score}</p>
-        <div>
-          {circles}
-        </div>
+        <div>{circles}</div>
         <button onClick={this.starthandler}>Start</button>
         <button onClick={this.stopHandler}>Stop</button> 
         {/* Conditional rendering: if game over is true -->  + passing the score to gameover component */}
-        {this.state.showGameOver && <GameOver score={this.state.score} /> }  
+        {this.state.showGameOver && <GameOver score={this.state.score} /> }
+        <Footer/>
       </div>
     );
   }
