@@ -15,7 +15,7 @@ class App extends Component {
     score:0,
     current: 0,
     showGameOver: false,
-    circles:[
+      circles:[
       {id:1, color:"color1"},
       {id:2, color:"color2"},
       {id:3, color:"color3"},
@@ -43,6 +43,7 @@ class App extends Component {
     })
   };
 
+  
   // --- Function for defining next circle and all actions linked to it ----- //
    
   nextCircle = () => {
@@ -51,6 +52,7 @@ class App extends Component {
       this.stopHandler();
       return;
     }
+    
     // nextActive at beginning as undefined.
     let nextActive = undefined;
 
@@ -77,6 +79,7 @@ class App extends Component {
   starthandler = () => {
     this.nextCircle();
   }
+   
   // Stops 
   stopHandler = () => {
     clearTimeout(this.timer);
@@ -107,7 +110,7 @@ class App extends Component {
         <button onClick={this.starthandler}>Start</button>
         <button onClick={this.stopHandler}>Stop</button> 
         {/* Conditional rendering: if game over is true -->  + passing the score to gameover component */}
-        {this.state.showGameOver && <GameOver score={this.state.score} />  }  
+        {this.state.showGameOver && <GameOver score={this.state.score} /> }  
       </div>
     );
   }

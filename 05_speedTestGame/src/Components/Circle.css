@@ -4,28 +4,27 @@
     width: 150px;
     border-radius: 50%;
     margin:2rem;
-    box-shadow: 0 0 15px #333;
     cursor: pointer;
 }
 
 .color1 {
-    background-color: #05A1FB;
+    background-color: #255a2c;
 }
 
 .color2 {
-    background-color: #0905fb;
+    background-color: #1d862b;
 }
 
 .color3 {
-    background-color: #8987ee;
+    background-color: #227536;
 }
 
 .color4 {
-    background-color:#3a88ee;
+    background-color:#3c8859;
 }
 
 .circle.active {
-    background-color: #f0dfdf; /* define here if eg. image used on active (as background image) */
+    background-color: #221c1c; /* define here if eg. image used on active (as background image) */
 }
 
 
