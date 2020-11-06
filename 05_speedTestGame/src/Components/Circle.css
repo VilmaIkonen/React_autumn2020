@@ -8,14 +8,14 @@
 }
 
 .bg1, .bg2, .bg3, .bg4 {
-    background-image: url(../assets/eyesOpen.jpg);
+    background-image: url(../assets/eyesClosed.jpg);
     background-position: center;
     background-size: cover;
 
 }
 
 .circle.active {
-    background-image: url(../assets/eyesClosed.jpg);
+    background-image: url(../assets/eyesOpen.jpg);
     background-position: center;
     background-size: cover;
 }

@@ -31,11 +31,6 @@ class App extends Component {
   // Finding and passing data to the event.  
   clickHandler = (id) => {
 
-    function playClickSound(){
-      let clickSound = new Audio('/assets/clickSound.wav');
-      clickSound.play();
-    }
-
     console.log("Wow, you clicked circle no. " + id);
     // If currently selected circle does not match the clicked id, game over
     if (this.state.current !== id){
@@ -108,6 +103,7 @@ class App extends Component {
     });
 
     return (
+
       <div className="App">          
         <h1>Fast enough to catch the owl?</h1>
         <h2>Click the owl when it opens the eyes</h2>
