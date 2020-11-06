@@ -7,30 +7,23 @@
     cursor: pointer;
 }
 
-.color1 {
-    background-color: #255a2c;
-}
+.bg1, .bg2, .bg3, .bg4 {
+    background-image: url(../assets/eyesOpen.jpg);
+    background-position: center;
+    background-size: cover;
 
-.color2 {
-    background-color: #1d862b;
-}
-
-.color3 {
-    background-color: #227536;
-}
-
-.color4 {
-    background-color:#3c8859;
 }
 
 .circle.active {
-    background-color: #221c1c; /* define here if eg. image used on active (as background image) */
+    background-image: url(../assets/eyesClosed.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 
 @media (max-width: 576px) {
     .circle{
-        height:100px;
-        width: 100px;
+        height:120px;
+        width: 120px;
     }
 }

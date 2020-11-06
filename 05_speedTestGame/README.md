@@ -1,2 +1,2 @@
 # Speed test game
-![Speed Game](src/Screenshot.png)
+![Speed Game](src/assets/Screenshot.png)

@@ -10,7 +10,7 @@ const gameOver = (props) => {
     return (
         <div className="overlay">
             <div className="gameOverBox">
-                <h2>Ouch! Game over. Faster next time?</h2>
+                <h2>Ouch! Faster and more accurate next time?</h2>
                 <p>Your score was: {props.score}</p>  
                 <button onClick={closeHandler}>Close</button> 
                 {/* "this" is not used with closehandler on button as it is not a class component!                 */}

@@ -4,7 +4,8 @@
 body {
   margin: 0;
   font-family: 'Nova Mono', monospace;
-  background-color: #ecb5e5;
+  background: url('./assets/owlBg.svg') no-repeat
+  fixed center center/cover;
   background-attachment: fixed;
   text-align: center;
 }
@@ -24,9 +25,9 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   margin: 1rem;
-  box-shadow: 0 0 10px #747474;  
+  box-shadow: 0 0 10px #6c6d70;  
   text-transform: uppercase;
-  background-color: teal;
+  background-color: rgb(31, 165, 165);
 }
 
 

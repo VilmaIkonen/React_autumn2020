@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Circle from './Components/Circle'
 import GameOver from './Components/GameOver'
+import './App.css'
 
 // Creating random number, in global scope. +1 = will include also max
 const getRandomInteger = (min, max) => {
@@ -16,10 +17,10 @@ class App extends Component {
     current: 0,
     showGameOver: false,
       circles:[
-      {id:1, color:"color1"},
-      {id:2, color:"color2"},
-      {id:3, color:"color3"},
-      {id:4, color:"color4"}
+      {id:1, color:"bg1"},
+      {id:2, color:"bg2"},
+      {id:3, color:"bg3"},
+      {id:4, color:"bg4"}
     ],
   }
   
@@ -29,6 +30,11 @@ class App extends Component {
 
   // Finding and passing data to the event.  
   clickHandler = (id) => {
+
+    function playClickSound(){
+      let clickSound = new Audio('/assets/clickSound.wav');
+      clickSound.play();
+    }
 
     console.log("Wow, you clicked circle no. " + id);
     // If currently selected circle does not match the clicked id, game over
@@ -47,6 +53,7 @@ class App extends Component {
   // --- Function for defining next circle and all actions linked to it ----- //
    
   nextCircle = () => {
+
     // if >5  empty rounds, stop game
     if (this.state.rounds >= 5){
       this.stopHandler();
@@ -56,11 +63,11 @@ class App extends Component {
     // nextActive at beginning as undefined.
     let nextActive = undefined;
 
-    // Next highlighted circle with do-while-loop. first round will be always executted as condition is not given until while block
+    // Next highlighted circle with do-while-loop. First round will be always executed as condition is not given until while block
     do {
       nextActive = getRandomInteger(1, 4);
-    }
-    while (nextActive === this.state.current)
+    } while (nextActive === this.state.current);
+
     this.setState({
       current: nextActive,
       rounds: this.state.rounds +1,
@@ -89,7 +96,7 @@ class App extends Component {
 
   render() {
 
-    const circles = this.state.circles.map(item => {
+    const circles = this.state.circles.map((item) => {
       return (
       <Circle 
         key = {item.id} 
@@ -102,7 +109,8 @@ class App extends Component {
 
     return (
       <div className="App">          
-        <h1>Speed Game</h1>
+        <h1>Fast enough to catch the owl?</h1>
+        <h2>Click the owl when it opens the eyes</h2>
         <p>Your score: {this.state.score}</p>
         <div>
           {circles}
