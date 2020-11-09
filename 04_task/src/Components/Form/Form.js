@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 
 class Form extends Component {
 
-
 state = {
-    value: ""
+    firstname: "",
+    lastname: ""
 }
 
 changeValueHandler = (event) => {
-    this.setState({value: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
 }
 
 submitHandler = () => {
-    alert("Inserted text was: " + this.state.value)
+    alert("firstname: " + this.state.firstname +  ", lastname: " + this.state.lastname);
 }
 
     render() {
@@ -20,10 +20,16 @@ submitHandler = () => {
             <>
                 <form onSubmit={this.submitHandler}>
                     <div>
-                    <input type="text" value={this.state.value} onChange={this.changeValueHandler}/>
-                    {/* Button with input type */}
-                    <input type="submit" value="Send"/>
-                    <p>text from input:{this.state.value}</p>
+                        <label htmlFor="firstname">Firstname</label>
+                        <input type="text" name="firstname" onChange={this.changeValueHandler}/>
+                        {/* Button as input type */}
+                        <input type="submit" value="Send"/>
+                    </div>
+                    <div>
+                        <label htmlFor="lastname">Lastname</label>
+                        <input type="text" name="lastname" onChange={this.changeValueHandler}/>
+                        {/* Button as input type */}
+                        <input type="submit" value="Send"/>
                     </div>
                 </form>
             </>
