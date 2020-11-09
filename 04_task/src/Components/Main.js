@@ -1,10 +1,10 @@
 import React from 'react';
-import Article from './Article';
+import Form from './Form/Form';
 
 const Main = () => {
   return (
     <div>
-      <Article />
+      <Form />
     </div>
   );
 };
