@@ -17,7 +17,8 @@ class App extends Component {
     score:0,
     current: 0,
     showGameOver: false,
-      circles:[
+    rounds:0,
+    circles:[
       {id:1, color:"bg1"},
       {id:2, color:"bg2"},
       {id:3, color:"bg3"},
