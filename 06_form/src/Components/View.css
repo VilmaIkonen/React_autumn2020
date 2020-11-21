@@ -1,0 +1,16 @@
+.view {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.view input{
+  font-family: var(--view-input-font);
+  border: none;
+  border-bottom: grey solid 1px;
+}
+
+.view textarea, .view select {
+  font-family: var(--view-input-font);
+}

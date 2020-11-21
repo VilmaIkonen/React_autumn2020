@@ -1,11 +1,11 @@
 import React from 'react';
 
-const View = () => {
+const PopUp = (props) => {
     return (
         <div>
-            <p>Hello view</p>
+            
         </div>
     );
 };
 
-export default View;
+export default PopUp;
