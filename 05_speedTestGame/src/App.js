@@ -105,7 +105,6 @@ class App extends Component {
     });
 
     return (
-
       <div className="App">          
         <h1>Fast enough to catch the owl?</h1>
         <h2>Click the owl when it opens the eyes</h2>
