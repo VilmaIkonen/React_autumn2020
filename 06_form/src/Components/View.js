@@ -24,8 +24,7 @@ const View = ({firstname, lastname, phonenumber, role, message}) => {
 					<label htmlFor="role">Role</label>
 					<p>{role}</p>
         </div>
-      	<button type="submit">Submit</button>
-    	</form>
+      </form>
     );
 };
 

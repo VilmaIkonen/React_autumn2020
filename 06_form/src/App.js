@@ -43,11 +43,11 @@ class App extends Component {
           />
      
         <PopUp
-          // firstname={this.state.firstname}
-          // lastname={this.state.lastname}
-          // phonenumber={this.state.phonenumber}          
-          // role={this.state.role}
-          // message={this.state.message}
+          firstname={this.state.firstname}
+          lastname={this.state.lastname}
+          phonenumber={this.state.phonenumber}          
+          role={this.state.role}
+          message={this.state.message}
         /> 
       </div>
     );
