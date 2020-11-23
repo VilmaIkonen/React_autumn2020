@@ -1,42 +1,65 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Form extends Component {
 
-	// Function for showing the popup
-	handleSubmit = () => {   
-	this.setState({showPopUp: true});
-	}
-
-	render() {
-		return (
-			<form>
+const Form = ({ onChange, onSubmit, role }) => {
+	return (
+		<div className="form">
+			<form onSubmit= {onSubmit}>
 				<div>
 					<label htmlFor="firstname">First name</label>
-					<input type="text" name="firstname" onChange={this.handleChange}/>	
+					<input 
+						type="text" 
+						name="firstname" 
+						id="firstname"
+						onChange={onChange}
+						required
+					/>	
 				</div>
 				<div>
 					<label htmlFor="lastname">Last name</label>
-					<input type="text" name="lastname" onChange={this.handleChange}/>
+					<input 
+						type="text" 
+						name="lastname" 
+						id="lastname"
+						onChange={onChange}
+						required
+					/>
 				</div>
 				<div>
 					<label htmlFor="phonenumber">Phone number</label>
-					<input type="number" name="phonenumber" min="0" onChange={this.handleChange}/>
+					<input 
+						type="number" 
+						name="phonenumber" 
+						id="phonenumber"
+						onChange={onChange}
+						required
+						min="0"
+					/>
 				</div>
 				<div>
 					<label htmlFor="message">Message</label>
-					<textarea name="message" onChange={this.handleChange}></textarea>
+					<textarea 
+						type="text" 
+						name="message" 
+						id="message"
+						onChange={onChange}
+						required
+					/>
 				</div>
 				<div>
 					<label htmlFor="role">Role</label>
-					<select name="role" onChange={this.handleChange}>
+					<select name="role" value={role} onChange={onChange}>
 						<option value="teacher">Teacher</option>
 						<option value="student">Student</option>
 						<option value="other">Other</option>
-					</select>		
+					</select>	
+				</div>	
+				<div>
+					<input type="submit" value="send"/>
 				</div>		
 			</form>
-		);
-	}
-}
+		</div>
+	);
+};
 
 export default Form;
