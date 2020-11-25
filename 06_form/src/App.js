@@ -34,6 +34,7 @@ class App extends Component {
           onSubmit={this.handleSubmit} 
           role={this.state.role}
           />
+          	
         <View 
           firstname={this.state.firstname}
           lastname={this.state.lastname}

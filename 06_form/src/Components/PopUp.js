@@ -9,7 +9,7 @@ const PopUp = ({firstname, lastname, phonenumber, message, role}) => {
 
 	return (
 		<form>
-			<h2>The info your are about to submit: </h2>
+			<h2>The info you submitted: </h2>
 			<div className="firstname">
 					<label htmlFor="firstname">First name</label>
 					<p>{firstname}</p>

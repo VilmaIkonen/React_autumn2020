@@ -5,8 +5,11 @@
   align-items: center;
   background-color: var(--dark-color);
   font-family: var(--basic-font);
-  color: var(--light-color);
   padding: 2rem;
+}
+
+.App h1{
+  color: var(--light-color)
 }
 
 label {

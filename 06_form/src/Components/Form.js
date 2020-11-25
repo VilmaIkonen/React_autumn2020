@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Form.css';
 
 const Form = ({ onChange, onSubmit, role }) => {
 	return (
@@ -55,7 +55,10 @@ const Form = ({ onChange, onSubmit, role }) => {
 					</select>	
 				</div>	
 				<div>
-					<input type="submit" value="send"/>
+					<input 
+						id="sendButton" 
+						type="submit" 
+						value="Send"/>
 				</div>		
 			</form>
 		</div>
