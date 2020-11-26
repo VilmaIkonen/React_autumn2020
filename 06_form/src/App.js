@@ -4,6 +4,7 @@ import View from './Components/View';
 import PopUp from './Components/PopUp';
 import './App.css';
 
+// App.js collects the data, in all components props is used to get the data
 class App extends Component {
 
   state = {
@@ -15,11 +16,13 @@ class App extends Component {
     showPopUp: false
   };
 
-	// Function used for passing data onwards when the form is changed
+	// Function used for passing data onwards when the form is changed. Data goes to View and PopUp
 	handleChange = (event) => {
 	this.setState({[event.target.name]: event.target.value});
   }  
   
+  // with submit, popup is shown
+  // by default submit clears reloads/clears the page. --> preventDefault() needed!
   handleSubmit = (ev) => {    
     this.setState({showPopUp: true});
     ev.preventDefault();
@@ -30,8 +33,9 @@ class App extends Component {
       <div className="App">
         <h1>Submission form</h1>
         <Form 
-          onChange={this.handleChange} 
-          onSubmit={this.handleSubmit} 
+        // every time there is some change in the form, will look for handleChange(). all changes will be saved in the state
+          change={this.handleChange} 
+          submit={this.handleSubmit} 
           role={this.state.role}
           />
           	

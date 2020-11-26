@@ -6,7 +6,6 @@ const PopUp = ({firstname, lastname, phonenumber, message, role}) => {
 		window.location.reload();
 	}
 
-
 	return (
 		<form>
 			<h2>The info you submitted: </h2>

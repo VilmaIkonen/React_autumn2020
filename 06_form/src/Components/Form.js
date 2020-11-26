@@ -1,17 +1,21 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({ onChange, onSubmit, role }) => {
+// Data input is in the Form
+// App.js collects the data, in all components props is used to get the data
+// props have been destructured in all components
+const Form = ({ change, submit, role }) => {
 	return (
 		<div className="form">
-			<form onSubmit= {onSubmit}>
+	{/* submit can be done on <button> or normally in forms input type submit is used Then onSubmit can be used */}
+			<form onSubmit= {submit}>
 				<div>
 					<label htmlFor="firstname">First name</label>
 					<input 
 						type="text" 
 						name="firstname" 
 						id="firstname"
-						onChange={onChange}
+						onChange={change}
 						required
 					/>	
 				</div>
@@ -21,7 +25,7 @@ const Form = ({ onChange, onSubmit, role }) => {
 						type="text" 
 						name="lastname" 
 						id="lastname"
-						onChange={onChange}
+						onChange={change}
 						required
 					/>
 				</div>
@@ -31,7 +35,7 @@ const Form = ({ onChange, onSubmit, role }) => {
 						type="number" 
 						name="phonenumber" 
 						id="phonenumber"
-						onChange={onChange}
+						onChange={change}
 						required
 						min="0"
 					/>
@@ -42,13 +46,13 @@ const Form = ({ onChange, onSubmit, role }) => {
 						type="text" 
 						name="message" 
 						id="message"
-						onChange={onChange}
+						onChange={change}
 						required
 					/>
 				</div>
 				<div>
 					<label htmlFor="role">Role</label>
-					<select name="role" value={role} onChange={onChange}>
+					<select name="role" value={role} onChange={change}>
 						<option value="Teacher">Teacher</option>
 						<option value="Student">Student</option>
 						<option value="Other">Other</option>
