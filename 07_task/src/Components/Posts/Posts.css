@@ -1,0 +1,19 @@
+.posts {
+  display: grid;
+  align-items: gflex-start;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  background-color: khaki;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.post {
+  background-color: red;
+  color: #333;
+  border-radius: 3px;
+}
+
+.post h2::first-letter {
+  text-transform: capitalize;
+}
