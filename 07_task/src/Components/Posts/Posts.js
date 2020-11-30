@@ -48,7 +48,7 @@ class Posts extends Component {
          <div>
          {/* mapping always needs a key! */}
         <ul className="posts">{this.state.posts.map((post) => (
-          <li classname="post" key= {post.id}>
+          <li className="post" key= {post.id}>
             <img src={post.thumbnailUrl} alt={post.id} />
             <h2>{post.id} {post.title}</h2>
             <div className="remove" onClick={() => this.removeHandler(post.id)}>X</div>

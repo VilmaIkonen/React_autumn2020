@@ -5,7 +5,7 @@ import axios from 'axios';
 const API = "http://api.weatherstack.com/current"
 
 // Hide API key in .env! Add .env file to .gitignore file!
-const parameters = {
+const params = {
   access_key: process.env.REACT_APP_API_KEY,
   query: 'Helsinki'
 }
@@ -25,20 +25,15 @@ class Weather extends Component {
     this.setState({ isLoading: true })
 
     axios
-    .get(API, { parameters })
+    .get(API, { params })
     .then((response) => 
       this.setState({ weather: response.data, isLoading: false })
     );
   }
 
   render() {
-    return this.state.isLoading ? (
-    <p>Weather loading ...</p>
-    ) : (
-    <p>
-      Current temperature in { this.state.weather.location.name } is...C and it feels like ...C
-    </p>
-    );
+    return this.state.isLoading ? (<p>Weather loading ...</p>) : (<p>Current temperature in { this.state.weather.location.name } is...C and it feels like ...C
+    </p>);
   }
 }
 
