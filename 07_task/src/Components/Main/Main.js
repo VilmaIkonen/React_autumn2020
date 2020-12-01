@@ -3,8 +3,12 @@ import Posts from '../Posts/Posts'
 import Blog from '../Posts/Blog'
 
 const Main = () => {
-  return <main><Posts /></main>;
-  
+  return (
+    <main>
+      <Blog/>
+      <Posts/>
+    </main>
+  );  
 };
 
 export default Main;

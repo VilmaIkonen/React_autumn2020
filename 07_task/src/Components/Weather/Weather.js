@@ -32,8 +32,14 @@ class Weather extends Component {
   }
 
   render() {
-    return this.state.isLoading ? (<p>Weather loading ...</p>) : (<p>Current temperature in { this.state.weather.location.name } is...C and it feels like ...C
-    </p>);
+    if (this.state.isLoading) {
+      return <p>Loading weather...</p>;
+    }
+    return (
+      <p>
+      Current weather in <span>{this.state.weather.location.name}</span>: {this.state.weather.current.weather_descriptions}. Temperature is {this.state.weather.current.temperature} ℃ and it feels like {this.state.weather.current.feelslike} ℃.
+    </p>
+    )
   }
 }
 

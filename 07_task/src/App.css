@@ -25,3 +25,7 @@ main button {
   padding: 1rem 2rem;
   margin-right: 1rem;
 }
+
+span {
+  font-weight: bold;
+}
