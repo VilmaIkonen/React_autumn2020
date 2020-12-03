@@ -5,13 +5,13 @@ import './App.css';
 import Form from './Form/Form';
 import View from './View/View';
 import Popup from './Popup/Popup';
-import Posts from  './Posts/Posts';
+import Notes from  './Notes/Notes';
 import axios from 'axios';
 
 const App = () => {
 
-  // For post
-  const [ post, setPost ] = useState({
+  // For note
+  const [ note, setNotes ] = useState({
     firstname: "",
     lastname: "",
     phonenumber: "",
@@ -29,7 +29,7 @@ const App = () => {
 
   // For database/NotesList
   const submitHandlerDb = () => {
-    axios.post("http://localhost:3001/notes/", post);
+    axios.post("http://localhost:3001/notes/", note);
     window.location.reload();
    };
   // const [ toDb, setToDb ] = useState (false);
@@ -41,8 +41,8 @@ const App = () => {
 
   // For form
   const changeHandler = (event) => {
-    setPost({
-      ...post, // spread! prevent not to overwrite the previous note input
+    setNotes({
+      ...note, // spread! prevent not to overwrite the previous note input
       [event.target.name]: event.target.value,
     });
   };
@@ -52,29 +52,29 @@ const App = () => {
     <>
     <Form onChange={changeHandler} submit={submitHandlerPopUp} />
     <View
-      firstname={post.firstname}
-      lastname={post.lastname}
-      phonenumber={post.phonenumber}
-      message={post.message}
-      role={post.role}
+      firstname={note.firstname}
+      lastname={note.lastname}
+      phonenumber={note.phonenumber}
+      message={note.message}
+      role={note.role}
     />
     {/* {toDb && ( */}
-      <Posts       
-        firstname={post.firstname}
-        lastname={post.lastname}
-        phonenumber={post.phonenumber}
-        message={post.message}
-        role={post.role}
+      <Notes      
+        firstname={note.firstname}
+        lastname={note.lastname}
+        phonenumber={note.phonenumber}
+        message={note.message}
+        role={note.role}
     />
     {/* )} */}
     {showPopUp && (
       <Popup 
         submit={submitHandlerDb}
-        firstname={post.firstname}
-        lastname={post.lastname}
-        phonenumber={post.phonenumber}
-        message={post.message}
-        role={post.role}
+        firstname={note.firstname}
+        lastname={note.lastname}
+        phonenumber={note.phonenumber}
+        message={note.message}
+        role={note.role}
       />
     )}
   </>

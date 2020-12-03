@@ -47,6 +47,7 @@ const Form = ({ submit, onChange, role }) => {
         <div>
           <label htmlFor="role">Role</label>
           <select name="role" value={role} onChange={onChange}>
+            <option value="" disabled selected>Select role</option>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
             <option value="other">Other</option>

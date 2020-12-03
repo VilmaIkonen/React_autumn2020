@@ -3,30 +3,30 @@ import axios from 'axios'
 
 const API = "http://localhost:3001/notes"
 
-const Posts = (
+const Notes = (
   // { firstname, lastname, phonenumber, message, role }
   ) => {
 
-  const [ posts, setPosts ] = useState([]);
+  const [ notes, setNotes ] = useState([]);
 
 useEffect(() => {
   axios
   .get(API)
   .then(res => {
-    setPosts(res.data);
+    setNotes(res.data);
   })
 }, []);
 
   return (
     <div>
     <ul>
-      {posts.map(post => 
+      {notes.map(note => 
         <li>
-         { post.firstname }
-         { post.lastname }
-         { post.phonenumber }
-         { post.message }
-         { post.role }
+         { note.firstname }
+         { note.lastname }
+         { note.phonenumber }
+         { note.message }
+         { note.role }
         </li>
       )}
     </ul>
@@ -41,4 +41,4 @@ useEffect(() => {
   );
 };
 
-export default Posts;
+export default Notes;
