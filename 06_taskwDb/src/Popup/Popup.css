@@ -11,10 +11,11 @@
 }
 
 .popup {
+  display: block;
   position: relative;
   top: 0;
   left: 0;
-  height: 50%;
+  height: 60%;
   width: 50%;
   background-color: white;
   padding: 2rem;
@@ -23,4 +24,19 @@
 }
 .popup p {
   padding: 1rem 0;
+}
+
+#popUpSubmit {
+  margin-left: 0;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#doNotSubmit {
+  background-color: rgba(99, 4, 12);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
 }
