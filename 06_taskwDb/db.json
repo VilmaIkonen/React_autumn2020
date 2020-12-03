@@ -1,13 +1,36 @@
 {
-  "notes": 
-    [ 
-      {
-      "id":1,
+  "notes": [
+    {
+      "id": 1,
       "firstname": "Vilma",
       "lastname": "Ikonen",
       "phonenumber": "0044556677",
       "message": "Greetings from Finland!",
       "role": "Student"
-      }
-    ]
+    },
+    {
+      "firstname": "sgd",
+      "lastname": "sdf",
+      "phonenumber": "sdg",
+      "message": "sdg",
+      "role": "",
+      "id": 2
+    },
+    {
+      "firstname": "sadg",
+      "lastname": "dsgs",
+      "phonenumber": "df",
+      "message": "sdg",
+      "role": "teacher",
+      "id": 3
+    },
+    {
+      "firstname": "sdg",
+      "lastname": "fgjgf",
+      "phonenumber": "fffffffffffff",
+      "message": "fffffffffffffffffff",
+      "role": "teacher",
+      "id": 4
+    }
+  ]
 }

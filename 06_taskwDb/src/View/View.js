@@ -4,7 +4,7 @@ import "./View.css";
 const View = ({ firstname, lastname, phonenumber, message, role }) => {
   return (
     <div className="view">
-      <h1>Check your input</h1>
+      <h1>Your input</h1>
       <div className="notepad">
         <p>
           First name <span>{firstname}</span>

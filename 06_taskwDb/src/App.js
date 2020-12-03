@@ -28,25 +28,23 @@ const App = () => {
   };
 
   // For database/NotesList
-  const submitHandlerDb = () => {
-    axios.post("http://localhost:3001/notes/", note);
+  const submitHandlerNotes = () => {
+    axios.post("http://localhost:3001/notes", note);
     window.location.reload();
    };
   // const [ toDb, setToDb ] = useState (false);
 
-  // const submitHandlerDb = (event) => {
+  // const submitHandlerNotes = () => {
   //   setToDb(true);
-  //   event.preventDefault();
   // };
 
-  // For form
+  // For form, spread! prevent not to overwrite the previous note input
   const changeHandler = (event) => {
     setNotes({
-      ...note, // spread! prevent not to overwrite the previous note input
+      ...note, 
       [event.target.name]: event.target.value,
     });
   };
-
 
   return (
     <>
@@ -69,7 +67,7 @@ const App = () => {
     {/* )} */}
     {showPopUp && (
       <Popup 
-        submit={submitHandlerDb}
+        submit={submitHandlerNotes}
         firstname={note.firstname}
         lastname={note.lastname}
         phonenumber={note.phonenumber}
