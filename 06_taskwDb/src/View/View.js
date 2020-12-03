@@ -13,12 +13,12 @@ const View = ({ firstname, lastname, phonenumber, message, role }) => {
           Last name <span>{lastname}</span>
         </p>
         <p>
-          Phonenumber <span>{phonenumber}</span>
+          Phone number <span>{phonenumber}</span>
         </p>
         <p>
           Message <span>{message}</span>
         </p>
-        <p>
+        <p id="lastRow">
           Role <span>{role}</span>
         </p>
       </div>

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Sansita+Swashed:wght@300&display=swap');
 
 .view {
   padding: 2rem;
 }
+
 .notepad {
   background: #f4f4f4;
   margin: 1rem 0;
@@ -13,21 +14,24 @@
 .notepad::before {
   content: "";
   width: 2px;
-  height: 100%;
-  border-left: 1px solid rgb(255, 77, 0);
-  border-right: 1px solid rgb(255, 77, 0);
+  height: 100%; 
+  border-left: solid 2px rgb(48, 146, 80); 
   position: absolute;
   left: 35px;
 }
 
 .notepad p {
   padding: 1rem;
-  border-bottom: 1px dotted rgb(145, 145, 145);
+  border-bottom: 3px dotted #cecece; 
   text-indent: 50px;
 }
 
 .notepad span {
-  font-family: "Caveat", cursive;
+  font-family: 'Sansita Swashed', cursive;
   font-size: 1.5rem;
   margin-left: 15px;
+}
+
+#lastRow {
+  border-bottom: none;
 }
