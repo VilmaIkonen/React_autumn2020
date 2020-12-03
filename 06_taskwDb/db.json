@@ -1,0 +1,13 @@
+{
+  "notes": 
+    [ 
+      {
+      "id":1,
+      "firstname": "Vilma",
+      "lastname": "Ikonen",
+      "phonenumber": "0044556677",
+      "message": "Greetings from Finland!",
+      "role": "Student"
+      }
+    ]
+}
