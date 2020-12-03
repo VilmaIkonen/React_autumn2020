@@ -26,7 +26,7 @@ const Popup = ({ submit, firstname, lastname, phonenumber, message, role }) => {
           <p>
             Role: <span>{role}</span>
           </p>
-          <button onClick={closeHandler}>Do not submit the data and Close</button>
+          <input onClick={closeHandler} value="Do not submit and close" />
           <input onClick={submit} type="submit" value="Submit the data" />
         </div>
       </div>

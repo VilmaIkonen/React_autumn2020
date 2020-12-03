@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import './Notes.css'
 
 const API = "http://localhost:3001/notes"
 
@@ -18,7 +19,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div>
+    <div className="hideNotes">
     <ul>
       {notes.map(note => 
         <li>
