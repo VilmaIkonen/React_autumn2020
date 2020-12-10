@@ -1,32 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
+import React from 'react';
+import './AnimalCard.css'
 
-const URL = "http://localhost:3001/animals"
-
-const AnimalCard = () => {
-
-  const [animals, setAnimal] = useState([]);
-
-  useEffect(() => {
-    axios
-    .get(URL)
-    .then(res => {
-      setAnimal(res.data);
-    })
-  }, []);
-
+const AnimalCard = ({ name, aclass, img, desc, link }) => {
   return (
-    <div>
-        <ul> {animals.map(animal => 
-        <li>
-         { animal.name }
-         { animal.aclass }
-         { animal.img }
-         { animal.desc }
-         { animal.link }
-        </li>
-      )}
-      </ul>      
+    <div className="animalCard">
+      <h2><span>{name}</span></h2>
+      <p>{aclass}</p>
+      <img src={img} alt={name}/>
+      <p>{desc}</p>
+      <a href={link}></a>      
     </div>
   );
 };

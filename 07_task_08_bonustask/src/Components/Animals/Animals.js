@@ -2,7 +2,7 @@ import React from 'react';
 import AnimalCard from './AnimalCard'
 import NewAnimal from './NewAnimal'
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const URL = "http://localhost:3001/animals";
 
@@ -30,8 +30,16 @@ const Animals = () => {
 
   return (
     <div>
-      <AnimalCard submit={submitAnimal}/>
-      <NewAnimal />      
+      <AnimalCard 
+      submit={submitAnimal}
+      onChange={changeHandler}
+      name={animal.name}
+      aclass={animal.aclass}
+      img={animal.img}
+      desc={animal.desc}
+      link={animal.link}
+      />
+      <NewAnimal onChange={changeHandler} submit={submitAnimal}/>      
     </div>
   );
 };
