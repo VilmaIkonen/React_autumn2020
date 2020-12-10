@@ -7,10 +7,11 @@ import { useRouteMatch, Route, Switch } from 'react-router-dom'
 const Blog = () => {
   const [posts, setPosts] = useState([]);
 
-  let {path, url} = useRouteMatch();
+  let { path, url } = useRouteMatch();
 
   useEffect(() => {
-    axios.get("http://localhost:3001/posts/").then((response) => {
+    axios.get("http://localhost:3001/posts/")
+    .then((response) => {
       setPosts(response.data);
     });
   }, []);
@@ -22,18 +23,17 @@ const Blog = () => {
         key={p.id}
         title={p.title}
         author={p.author}
-        desc={p.desc}
         img={p.img}
         link={`${url}/${p.id}`}
       />
     );
   });
 
-  // :postID (this could be whatever...) defines for useParams what to look for
+  // :id (this could be whatever...) defines for useParams what to look for
   return (
     <>
       <Switch>
-        <Route path={`${path}/:postID`}>
+        <Route path={`${path}/:id`}>
           <SinglePost/>
         </Route>
         <Route path={path}>
