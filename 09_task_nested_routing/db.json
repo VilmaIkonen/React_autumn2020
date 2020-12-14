@@ -27,6 +27,20 @@
       "author": "Jane",
       "desc": "Quisque malesuada felis quam, eget egestas nisi pharetra sed. Quisque vulputate mauris placerat eros finibus rhoncus malesuada in tellus. Ut accumsan risus quam, in fermentum lectus suscipit non. Phasellus in semper nisl.",
       "img": "https://source.unsplash.com/1600x900/?mountain"
+    },
+    {
+      "title": "Hello!",
+      "author": "Vilma",
+      "desc": "Merry X-mas!",
+      "img": "https://react-bootstrap.github.io/components/navs/",
+      "id": 5
+    },
+    {
+      "title": "Hello!",
+      "author": "Vilma",
+      "desc": "Merry X-mas!",
+      "img": "https://react-bootstrap.github.io/components/navs/",
+      "id": 6
     }
   ]
 }

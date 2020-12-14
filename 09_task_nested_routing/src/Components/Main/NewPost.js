@@ -6,7 +6,7 @@ const NewPost = () => {
     title: "",
     author: "",
     desc: "",
-    img: "",
+    img: ""
   });
 
   const changeValueHandler = (e) => {

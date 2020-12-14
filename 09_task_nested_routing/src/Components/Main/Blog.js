@@ -10,7 +10,7 @@ const Blog = () => {
   let { path, url } = useRouteMatch();
 
   useEffect(() => {
-    axios.get("http://localhost:3001/posts/")
+    axios.get("http://localhost:3001/posts")
     .then((response) => {
       setPosts(response.data);
     });
@@ -20,11 +20,11 @@ const Blog = () => {
   const PostList = posts.map((p) => {
     return (
       <BlogCard
-        key={p.id}
-        title={p.title}
-        author={p.author}
-        img={p.img}
-        link={`${url}/${p.id}`}
+        key = {p.id}
+        title = {p.title}
+        author = {p.author}
+        img = {p.img}
+        link = {`${url}/${p.id}`}
       />
     );
   });
@@ -33,12 +33,10 @@ const Blog = () => {
   return (
     <>
       <Switch>
-        <Route path={`${path}/:id`}>
+        <Route path = {`${path}/:id`}>
           <SinglePost/>
         </Route>
-        <Route path={path}>
-          {PostList}
-        </Route>
+        <Route path = {path}>{PostList}</Route>
       </Switch>
     </>
   );

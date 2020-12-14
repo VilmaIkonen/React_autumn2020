@@ -22,7 +22,11 @@ const SinglePost = () => {
 	}
 
 	if(post) {
-		postData = <div>{post.title} {post.author}</div>
+		postData = (
+			<div>
+			{post.title} {post.author} {post.desc}
+			</div>
+		)
 	}
 
 	return postData;
