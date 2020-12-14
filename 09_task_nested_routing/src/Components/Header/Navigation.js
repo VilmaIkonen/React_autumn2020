@@ -16,14 +16,6 @@ const Navigation= () => {
 				<Nav.Link href="/new_post" eventKey="new_post">New Post</Nav.Link>
 			</Nav.Item>
 		</Nav>
-		
-		// <nav> 
-		// 	<ul>
-		// 		<li> <Link to="/">Home</Link> </li>
-		// 		<li> <Link to="/blog">Blog</Link> </li>
-		// 		<li> <Link to="/new_post">New Post</Link> </li>
-		// 	</ul>
-		// </nav>
 	);
 };
 
