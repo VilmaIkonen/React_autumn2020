@@ -31,6 +31,7 @@ const Blog = () => {
                 title = {p.title} 
                 author = {p.author}
                 img = {p.img}
+                desc = {p.desc}
                 link = {`${url}/${p.id}`}
               />            
             </Card.Body>

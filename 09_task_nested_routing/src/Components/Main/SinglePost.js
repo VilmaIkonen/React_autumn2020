@@ -26,7 +26,7 @@ const SinglePost = () => {
 	if(post) {
 		postData = (
 			<div>
-				{post.title} {post.author} {post.desc} {post.desc}
+				{post.title} {post.author} {post.desc} {post.img} 
 			</div>
 
 		)
