@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Button } from 'react-bootstrap';
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -64,7 +65,7 @@ const NewPost = () => {
             onChange={changeValueHandler}
           />
         </div>
-        <button type="submit">Add new post</button>
+        <Button variant="outline-primary">Submit new post</Button>
       </form>
     </>
   );
