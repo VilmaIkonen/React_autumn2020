@@ -1,10 +1,12 @@
 import React from 'react';
+import { Alert } from 'react-bootstrap'
 
 const Nothing = () => {
   return (
-    <div>
-      There is nothing here, go <a href="/"><span>Home</span></a>
-    </div>
+  <Alert variant="primary">
+    There is nothing here, go
+    <Alert.Link href="/"> Home</Alert.Link>
+  </Alert>
   );
 };
 
