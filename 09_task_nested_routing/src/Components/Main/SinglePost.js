@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+
 import axios from 'axios';
 
 const SinglePost = () => {
@@ -24,8 +26,9 @@ const SinglePost = () => {
 	if(post) {
 		postData = (
 			<div>
-			{post.title} {post.author} {post.desc}
+				{post.title} {post.author} {post.desc} {post.desc}
 			</div>
+
 		)
 	}
 
@@ -33,3 +36,4 @@ const SinglePost = () => {
 };
 
 export default SinglePost;
+
