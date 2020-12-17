@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form } from 'react-bootstrap';
+import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -17,13 +18,20 @@ const NewPost = () => {
     });
   };
 
-  const addPostHandler = (e) => {
-    e.preventDefault();
+  const addPostHandler = (event) => {
+    event.preventDefault();
 
     axios.post("http://localhost:3001/posts", newPost).then((response) => {
       console.log(response.data);
     });
   };
+
+  // const [ showSuccessMessage, setShowSuccessMessage ] = useState(false);
+
+  // const submitHandlerSuccessMessage = (event) => {
+  //   setShowSuccessMessage(true);
+  //   event.preventDefault();
+  // }
 
   return (
     <>
@@ -67,8 +75,10 @@ const NewPost = () => {
             onChange={changeValueHandler}
             placeholder="https://..." />
         </Form.Group>
-          <Button type="submit" variant="outline-primary">Submit new post</Button>
-      </Form>
+        <Button
+          type="submit" variant="outline-primary">Submit new post</Button>
+        </Form>
+      <SuccessMessage/>   
     </>          
   );
 };

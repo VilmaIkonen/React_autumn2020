@@ -29,7 +29,7 @@ span {
 }
 
 .BlogCard {
-  width: 250px;
+  width: 500px;
   margin: 1rem;
   background: #eee;
   padding: 1rem;
@@ -51,9 +51,9 @@ span {
 
 .newPost input,
 .newPost textarea {
-  width: 200px;
+  max-width: 400px;
   border: 1px solid rgb(99, 99, 99);
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-size: 0.8rem;
 }
 
