@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form } from 'react-bootstrap';
-import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -26,12 +25,12 @@ const NewPost = () => {
     });
   };
 
-  // const [ showSuccessMessage, setShowSuccessMessage ] = useState(false);
+  const [ successMessage, setSuccessMessage ] = useState(false);
 
-  // const submitHandlerSuccessMessage = (event) => {
-  //   setShowSuccessMessage(true);
-  //   event.preventDefault();
-  // }
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    setSuccessMessage(true);
+  }
 
   return (
     <>
@@ -76,9 +75,18 @@ const NewPost = () => {
             placeholder="https://..." />
         </Form.Group>
         <Button
+          onClick={handleSubmit}
           type="submit" variant="outline-primary">Submit new post</Button>
         </Form>
-      <SuccessMessage/>   
+        {successMessage && <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Congrats!</strong> Your details have been submitted successfully
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" 
+              onClick={()=>{setSuccessMessage(false)}}>
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+     }
+   
     </>          
   );
 };
