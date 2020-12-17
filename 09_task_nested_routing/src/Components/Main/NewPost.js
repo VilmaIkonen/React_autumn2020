@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form } from 'react-bootstrap';
+import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -81,17 +82,10 @@ const NewPost = () => {
         </Form.Group>
         <Button
           // onClick={handleSubmit}
-          type="submit" variant="outline-primary">Submit new post</Button>
-        </Form>
-        {/* {successMessage && <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Congrats!</strong> Your details have been submitted successfully
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close" 
-              onClick={()=>{setSuccessMessage(false)}}>
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-     }
-    */}
+          type="submit" variant="outline-primary">Submit new post       
+        </Button>
+        {/* {successMessage && <SuccessMessage />}        */}
+      </Form>
     </>          
   );
 };
