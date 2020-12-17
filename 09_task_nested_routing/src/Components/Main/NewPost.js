@@ -22,15 +22,16 @@ const NewPost = () => {
 
     axios.post("http://localhost:3001/posts", newPost).then((response) => {
       console.log(response.data);
+      window.location.reload();
     });
   };
 
-  const [ successMessage, setSuccessMessage ] = useState(false);
+  // const [ successMessage, setSuccessMessage ] = useState(false);
 
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    setSuccessMessage(true);
-  }
+  // const handleSubmit=(e)=>{
+  //   e.preventDefault();
+  //   setSuccessMessage(true);
+  // }
 
   return (
     <>
@@ -43,7 +44,8 @@ const NewPost = () => {
             name="title"
             id="title"
             onChange={changeValueHandler} 
-            placeholder="Post title" />
+            placeholder="Post title"
+            maxLength={30} />
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Author</Form.Label>
@@ -52,7 +54,8 @@ const NewPost = () => {
             name="author"
             id="author"
             onChange={changeValueHandler}
-            placeholder="Your name goes here" />
+            placeholder="Your name goes here"
+            maxLength={10} />
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Description</Form.Label>
@@ -63,7 +66,9 @@ const NewPost = () => {
             id="desc"
             onChange={changeValueHandler}
             rows={5} 
-            placeholder="Write your post here"/>
+            placeholder="Write your post here"
+            maxLength={400}
+            />
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Image URL</Form.Label>
@@ -75,10 +80,10 @@ const NewPost = () => {
             placeholder="https://..." />
         </Form.Group>
         <Button
-          onClick={handleSubmit}
+          // onClick={handleSubmit}
           type="submit" variant="outline-primary">Submit new post</Button>
         </Form>
-        {successMessage && <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {/* {successMessage && <div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>Congrats!</strong> Your details have been submitted successfully
               <button type="button" class="close" data-dismiss="alert" aria-label="Close" 
               onClick={()=>{setSuccessMessage(false)}}>
@@ -86,7 +91,7 @@ const NewPost = () => {
               </button>
           </div>
      }
-   
+    */}
     </>          
   );
 };
