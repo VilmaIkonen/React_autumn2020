@@ -29,18 +29,32 @@
       "img": "https://source.unsplash.com/1600x900/?mountain"
     },
     {
-      "title": "Hello!",
-      "author": "Vilma",
-      "desc": "Merry X-mas!",
-      "img": "https://react-bootstrap.github.io/components/navs/",
+      "title": "Season Greetings!",
+      "author": "Wilma",
+      "desc": "Happy Holidays and prosperous New year 2021!",
+      "img": "https://source.unsplash.com/1600x900/?christmas",
       "id": 5
     },
     {
-      "title": "Hello!",
-      "author": "Vilma",
-      "desc": "Merry X-mas!",
-      "img": "https://react-bootstrap.github.io/components/navs/",
+      "title": "Season Greetings!",
+      "author": "Wilma",
+      "desc": "Happy Holidays and prosperous New year 2021!",
+      "img": "https://source.unsplash.com/1600x900/?season",
       "id": 6
+    },
+    {
+      "title": "To all friends, near and far",
+      "author": "Rudolf",
+      "desc": "Wanna wish y'all merry Christmas and see ou next year!",
+      "img": "https://source.unsplash.com/sG2Eme9Ky8U",
+      "id": 7
+    },
+    {
+      "title": "Merry Xmas",
+      "author": "Santa's little elv",
+      "desc": "Be kind, stay safe!",
+      "img": "https://source.unsplash.com/dAmsJyJuR_8",
+      "id": 8
     }
   ]
 }

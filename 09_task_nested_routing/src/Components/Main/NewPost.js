@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -28,47 +28,51 @@ const NewPost = () => {
   return (
     <>
       <h1>Add new post</h1>
-      <form className="newPost" onSubmit={addPostHandler}>
-        <div>
-          <label htmlFor="title">Title</label>
-          <input
+      <Form className="newPost" onSubmit={addPostHandler}>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Title</Form.Label>
+          <Form.Control 
             type="text"
             name="title"
             id="title"
-            onChange={changeValueHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="author">Author</label>
-          <input
+            onChange={changeValueHandler} 
+            placeholder="Post title" />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Author</Form.Label>
+          <Form.Control 
             type="text"
             name="author"
             id="author"
             onChange={changeValueHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="desc">Description</label>
-          <textarea
+            placeholder="Your name goes here" />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Description</Form.Label>
+          <Form.Control 
+            as="textarea" 
             type="text"
             name="desc"
             id="desc"
             onChange={changeValueHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="img">Image URL</label>
-          <input
+            rows={5} 
+            placeholder="Write your post here"/>
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Image URL</Form.Label>
+          <Form.Control 
             type="text"
             name="img"
             id="img"
             onChange={changeValueHandler}
-          />
-        </div>
-        <Button variant="outline-primary">Submit new post</Button>
-      </form>
-    </>
+            placeholder="https://..." />
+        </Form.Group>
+          <Button type="submit" variant="outline-primary">Submit new post</Button>
+      </Form>
+    </>          
   );
 };
 
 export default NewPost;
+
+

@@ -23,7 +23,8 @@ const Blog = () => {
       <Accordion>
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
-            {p.id} {p.title} {p.author}
+            {/* {p.id}  */}
+            From {p.author}: {p.title} 
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
