@@ -29,15 +29,16 @@ span {
 }
 
 .BlogCard {
-  width: 500px;
-  margin: 1rem;
+  /* width: 1000px;  
   background: #eee;
-  padding: 1rem;
+  padding: 1rem; */
+  margin: 1rem;
   display: inline-block;
 }
 
 .BlogCard img {
   width: 100%;
+  max-height: 150px;
 }
 
 .newPost div {

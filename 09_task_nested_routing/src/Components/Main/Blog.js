@@ -3,7 +3,6 @@ import axios from "axios";
 import BlogCard from "./BlogCard";
 import SinglePost from './SinglePost'
 import { useRouteMatch, Route, Switch } from 'react-router-dom'
-import { Accordion, Card } from "react-bootstrap";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -18,27 +17,16 @@ const Blog = () => {
   }, []);
   
   // Map BlogCard component
-  const PostList = posts.map((p) => {
+  const PostList = posts.map((post) => {
     return (
-      <Accordion>
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            {/* {p.id}  */}
-            From {p.author}: {p.title} 
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <BlogCard
-                title = {p.title} 
-                author = {p.author}
-                img = {p.img}
-                desc = {p.desc}
-                link = {`${url}/${p.id}`}
-              />            
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+      <BlogCard 
+        key = {post.id}
+        title = {post.title}
+        author = {post.author}
+        img = {post.img}
+        link = {`${url}/${post.id}`}
+        desc = {post.desc}
+      />
     );
   });
 
