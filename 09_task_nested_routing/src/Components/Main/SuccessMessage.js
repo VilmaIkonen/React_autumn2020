@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Alert, Button } from 'react-bootstrap';
 
 const SuccessMessage = () => {
 
- const [show, setShow] = useState(true);
+ const closeHandler = () => {
+   window.location.reload();
+ }
     
   return (
     <Alert variant="success">
-    <Alert.Heading>How's it going?!</Alert.Heading>
-    <p>
-      Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-      lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
-      fermentum.
-    </p>
+    <Alert.Heading>Success!</Alert.Heading>
+    <p>Your post has been added to the Blog.</p>
     <hr />
     <div className="d-flex justify-content-end">
-      <Button onClick={() => setShow(false)} variant="outline-success">
-        Close me y'all!
+      <Button onClick={closeHandler} variant="outline-success">
+        X
       </Button>
     </div>
   </Alert>

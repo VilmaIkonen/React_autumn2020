@@ -11,33 +11,32 @@ const NewPost = () => {
     img: ""
   });
 
-  const changeValueHandler = (e) => {
+  const changeValueHandler = (event) => {
     setNewPost({
       ...newPost,
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  const addPostHandler = (event) => {
+  const [ successMessage, setSuccessMessage ] = useState(false);
+
+  const addPostShowSucceess = (event) => {
     event.preventDefault();
 
+    // show success alert
+    setSuccessMessage(true);
+
+    // add new post to db
     axios.post("http://localhost:3001/posts", newPost).then((response) => {
-      console.log(response.data);
-      window.location.reload();
-    });
+      console.log(response.data);      
+    });  
   };
 
-  // const [ successMessage, setSuccessMessage ] = useState(false);
-
-  // const handleSubmit=(e)=>{
-  //   e.preventDefault();
-  //   setSuccessMessage(true);
-  // }
 
   return (
     <>
       <h1>Add new post</h1>
-      <Form className="newPost" onSubmit={addPostHandler}>
+      <Form className="newPost" onSubmit={addPostShowSucceess} >
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Title</Form.Label>
           <Form.Control 
@@ -81,10 +80,10 @@ const NewPost = () => {
             placeholder="https://..." />
         </Form.Group>
         <Button
-          // onClick={handleSubmit}
-          type="submit" variant="outline-primary">Submit new post       
+          type="submit" 
+          variant="outline-primary">Submit new post       
         </Button>
-        {/* {successMessage && <SuccessMessage />}        */}
+        {successMessage && <SuccessMessage />}       
       </Form>
     </>          
   );
