@@ -4,7 +4,7 @@ import { Nav }from 'react-bootstrap'
 /* Don't do navigation like that, use Router instead */
 const Navigation= () => {
 	return (
-		<Nav defaultActiveKey="/" as="ul">
+		<Nav className="d-flex justify-content-center">
 			<Nav.Item as="li">
 				<Nav.Link href="/" eventkey="home">Home</Nav.Link>
 			</Nav.Item>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, Button } from 'react-bootstrap';
+import { Alert, Button, Container } from 'react-bootstrap';
 
 const SuccessMessage = () => {
 
@@ -8,16 +8,13 @@ const SuccessMessage = () => {
  }
     
   return (
-    <Alert variant="success">
-    <Alert.Heading>Success!</Alert.Heading>
-    <p>Your post has been added to the Blog.</p>
-    <hr />
-    <div className="d-flex justify-content-end">
-      <Button onClick={closeHandler} variant="outline-success">
-        X
-      </Button>
-    </div>
-  </Alert>
+    <Container className="d-flex justify-content">
+      <Alert variant="success" > 
+        <Button className="d-flex justify-content" onClick={closeHandler} variant="outline-success"> X </Button>
+      <Alert.Heading>Success!</Alert.Heading>
+      <p>Your post has been added to the Notes board.</p>
+      </Alert>
+    </Container>
   );
 };
 

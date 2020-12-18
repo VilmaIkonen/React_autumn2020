@@ -12,7 +12,7 @@ const PostCard = ({ title, author, desc, img, link }) => {
   }
 
   return (
-    <Card className="PostCard" style={{ width: '18rem' }}>
+    <Card className="m-3" style={{ width: '18rem' }}>
       <Card.Body>
         <Card.Img variant="top" src={img} alt={title}/>
         <Card.Title>{title}</Card.Title>

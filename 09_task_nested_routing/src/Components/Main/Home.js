@@ -1,19 +1,18 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import { Jumbotron, Button, Nav } from 'react-bootstrap';
+import { Jumbotron, Button } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <Jumbotron className="jumbotron">  
-      <h2>Send your loved ones Season Greetings! </h2>
-      <h1>Welcome to greetings.com!</h1>
-      <p><strong>and share the joy with others too</strong> 
-      </p>
-      <p>
-      <Button variant="primary" className="button">		
-        <Link to="/new_post">Let's make someone happy</Link> 
-      </Button>
-      </p>    
+    <Jumbotron className="mb-0 d-flex justify-content-center  text-center">  
+      <div className="jumbotron-container">
+        <h1>Welcome to greetings board!</h1>
+        <h2>Send your loved ones Season Greetings </h2>
+        <p><strong>and share the joy with others too</strong> 
+        </p>
+        <p>
+        <Button className="px-3 py-2" variant="primary" href="/new_post">Let's make someone happy</Button>
+        </p>  
+      </div>  
     </Jumbotron>
   );
 };

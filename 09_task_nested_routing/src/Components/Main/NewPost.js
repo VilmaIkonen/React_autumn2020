@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, Form } from 'react-bootstrap';
+import { Container, Button, Form } from 'react-bootstrap';
 import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
@@ -34,9 +34,9 @@ const NewPost = () => {
 
 
   return (
-    <>
+    <Container className="d-flex justify-content-center">      
+      <Form className="newPost text-center" onSubmit={addPostShowSucceess} >
       <h1>Add new post</h1>
-      <Form className="newPost" onSubmit={addPostShowSucceess} >
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Title</Form.Label>
           <Form.Control 
@@ -81,11 +81,11 @@ const NewPost = () => {
         </Form.Group>
         <Button
           variant="outline-primary"
-          type="submit" >Submit new post       
+          type="submit">Submit new post       
         </Button>
         {successMessage && <SuccessMessage />}       
       </Form>
-    </>          
+    </Container>          
   );
 };
 

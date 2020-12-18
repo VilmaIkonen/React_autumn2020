@@ -1,3 +1,3 @@
-# Blog with React and Bootstrap
+# Season Greetings Board with React and Bootstrap
 
-![Blog](src/Screenshot.png)
+![Greetings board](src/greetingsboard.png)
