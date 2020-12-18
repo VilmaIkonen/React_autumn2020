@@ -3,20 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-header {
+/* Header, Footer */
+header, footer {
   background-color: #1d1d1d;
   color: white;
-  padding: 2rem;
-}
-
-main {
   padding: 2rem;
 }
 
 nav ul li {
   display: inline-block;
   padding: 1rem;
+}
+
+/* Jumbotron */
+.homePage {
+  background-image: url("https://source.unsplash.com/1600x900/?winter");
+  background-size: cover;
+  height: 90vh;
+}
+
+main {
+  padding: 2rem;
 }
 
 a {
