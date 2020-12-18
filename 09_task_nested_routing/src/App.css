@@ -2,11 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
+
+:root {
+  --colorSilver: #B9BBBE;
+  --colorDarkGreen: #362F1F;
+  --colorLightGreen: #67654F;
+  --colorBrown: #634635;
+  --colorRed: #821F18;
+  --colorDark: #20160E;
+}
+
 /* Header, Footer */
 header, footer {
-  background-color: #1d1d1d;
-  color: white;
+  background-color: var(--colorDarkGreen);
+  color: var(--colorSilver);
   padding: 2rem;
 }
 
@@ -16,15 +27,33 @@ nav ul li {
 }
 
 /* Jumbotron */
-.homePage {
-  background-image: url("https://source.unsplash.com/1600x900/?winter");
+.jumbotron {
+  background: url("https://source.unsplash.com/VDXtVYJVj7A") fixed center no-repeat;
   background-size: cover;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 0;
+  color: var(--colorDark)
 }
 
-main {
-  padding: 2rem;
+.button {
+  background-color: var(--colorLightGreen);
+  color: var(--colorSilver);
+  border: none;
+  padding: 0.5rem 1rem;
 }
+
+/* 
+.hero{
+  background-position: center;
+
+  
+  display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; opacity: 0.4;
+} */
+
+/* main {
+  padding: 2rem;
+} */
 
 a {
   color: white;

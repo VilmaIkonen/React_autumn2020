@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import BlogCard from "./BlogCard";
+import PostCard from "./PostCard";
 import SinglePost from './SinglePost'
 import { useRouteMatch, Route, Switch } from 'react-router-dom'
 
-const Blog = () => {
+const Posts = () => {
   const [posts, setPosts] = useState([]);
 
   let { path, url } = useRouteMatch();
@@ -16,10 +16,10 @@ const Blog = () => {
     });
   }, []);
   
-  // Map BlogCard component
+  // Map PostCard component
   const PostList = posts.map((post) => {
     return (
-      <BlogCard 
+      <PostCard 
         key = {post.id}
         title = {post.title}
         author = {post.author}
@@ -43,4 +43,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Posts;

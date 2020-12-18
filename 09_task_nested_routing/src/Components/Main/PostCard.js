@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, Button, Accordion } from "react-bootstrap";
 
 
-const BlogCard = ({ title, author, desc, img, link }) => {
+const PostCard = ({ title, author, desc, img, link }) => {
 
   const [ showDesc, setShowDesc ] = useState(false);
 
@@ -12,7 +12,7 @@ const BlogCard = ({ title, author, desc, img, link }) => {
   }
 
   return (
-    <Card className="BlogCard" style={{ width: '18rem' }}>
+    <Card className="PostCard" style={{ width: '18rem' }}>
       <Card.Body>
         <Card.Img variant="top" src={img} alt={title}/>
         <Card.Title>{title}</Card.Title>
@@ -36,4 +36,4 @@ const BlogCard = ({ title, author, desc, img, link }) => {
   );
 };
 
-export default BlogCard;
+export default PostCard;

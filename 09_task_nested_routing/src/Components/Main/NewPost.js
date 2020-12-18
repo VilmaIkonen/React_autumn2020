@@ -80,8 +80,8 @@ const NewPost = () => {
             placeholder="https://..." />
         </Form.Group>
         <Button
-          type="submit" 
-          variant="outline-primary">Submit new post       
+          variant="outline-primary"
+          type="submit" >Submit new post       
         </Button>
         {successMessage && <SuccessMessage />}       
       </Form>

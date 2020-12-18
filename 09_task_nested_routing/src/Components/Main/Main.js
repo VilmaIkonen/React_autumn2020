@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./Home";
-import Blog from "./Blog";
+import Posts from "./Posts";
 import Nothing from './Nothing';
 import NewPost from "./NewPost";
 import { Switch, Route } from "react-router-dom"
@@ -13,7 +13,7 @@ const Main = () => {
     <main>
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/blog" component={Blog} />
+      <Route path="/posts" component={Posts} />
       <Route path="/new_post" component={NewPost} />
       <Route component={Nothing} />
     </Switch>
