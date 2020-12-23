@@ -2,17 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 :root {
   --colorWhite: #FFFFFF;
-  --colorAHover: #B9BBBE;
+  --colorAHover: #ced4dd;
   --colorHeaderFooter: #611e14;
-  --colorLightGreen: #67654F;
+  --colorLightGreen: #737c5e;
   --colorRed: #821F18;
   --colorDark: #20160E;
 
+}
+
+main {
+  background-color: var(--colorAHover);
 }
 
 h1, h2, p, label, input {
@@ -48,13 +52,12 @@ a:hover {
 header, footer {
   background-color: var(--colorHeaderFooter);
   padding: 2rem;
+  height: 120px;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -94,7 +97,6 @@ span {
 
 .card img {
   width: 100%;
-  max-height: 150px;
 }
 
 .card-header {
@@ -112,6 +114,7 @@ span {
 .newPost label {
   width: 200px;
   display: inline-block;
+  font-size: 1.2rem;
 }
 
 .newPost input,
@@ -119,6 +122,21 @@ span {
   width: 500px;
   max-width: 80vw;
   border: 1px solid rgb(99, 99, 99);
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
+/* SuccessMessage */
+
+.alert {
+  position: fixed;
+  top: calc(20% + 120px);
+  background-color: var(--colorLightGreen)
+} 
+
+.alert-heading {
+  color: var(--colorDark);
+}
+
+.closeBtn {
+  background-color: var(--colorHeaderFooter);
+}

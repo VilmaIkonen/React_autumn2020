@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Container, Button, Form } from 'react-bootstrap';
-import SuccessMessage from './SuccessMessage'
+import SuccessMessageModal from './SuccessMessageModal'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -34,8 +34,8 @@ const NewPost = () => {
 
 
   return (
-    <Container className="d-flex justify-content-center">      
-      <Form className="newPost text-center" onSubmit={addPostShowSucceess} >
+    <Container id="newPost" className="d-flex justify-content-center">      
+      <Form className="newPost text-center m-4" onSubmit={addPostShowSucceess} >
       <h1>Add new post</h1>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Title</Form.Label>
@@ -79,11 +79,12 @@ const NewPost = () => {
             onChange={changeValueHandler}
             placeholder="https://..." />
         </Form.Group>
-        <Button
+        <Button 
+          className="mb-2"
           variant="outline-primary"
           type="submit">Submit new post       
         </Button>
-        {successMessage && <SuccessMessage />}       
+        {successMessage && <SuccessMessageModal />}       
       </Form>
     </Container>          
   );

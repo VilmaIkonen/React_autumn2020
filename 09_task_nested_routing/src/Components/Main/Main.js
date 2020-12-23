@@ -10,7 +10,7 @@ import { Switch, Route } from "react-router-dom"
 
 const Main = () => {
   return (
-    <main>
+    <main id="main">
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/posts" component={Posts} />
