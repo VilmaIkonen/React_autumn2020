@@ -9,7 +9,7 @@ const SuccessMessage = () => {
     
   return (
     <Container fluid className="d-flex justify-content" bsPrefix="overlay">
-      <Alert variant="success" > 
+      <Alert variant="success" className="p-4"> 
         <Alert.Heading>Success!</Alert.Heading>
         <p>Your post has been added to the Notes board.</p>
         <Button className="closeBtn" onClick={closeHandler} variant="outline-success"> Close </Button>     

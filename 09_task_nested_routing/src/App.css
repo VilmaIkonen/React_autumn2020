@@ -6,17 +6,17 @@
 }
 
 :root {
-  --colorWhite: #FFFFFF;
+  --colorWhite: #ffffff;
   --colorAHover: #ced4dd;
   --colorHeaderFooter: #611e14;
   --colorLightGreen: #737c5e;
-  --colorRed: #821F18;
-  --colorDark: #20160E;
-
+  --colorRed: #821f18;
+  --colorDark: #20160e;
 }
 
 main {
-  background-color: var(--colorAHover);
+  background-color: var(--colorAHover); 
+  padding-bottom: 7.5rem; /* height of the footer */
 }
 
 h1, h2, p, label, input {
@@ -48,14 +48,32 @@ a:hover {
   text-decoration: none;
 }
 
+/* Container for fixing footer position */
+.container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
 /* Header, Footer */
 header, footer {
   background-color: var(--colorHeaderFooter);
   padding: 2rem;
-  height: 120px;
+  height: 7.5rem;
 }
 
+/* Header/Nav */
+nav ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* Footer */
 footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -63,11 +81,6 @@ footer {
 
 footer p {
   color: var(--colorWhite);
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 1rem;
 }
 
 /* Jumbotron */
@@ -85,11 +98,7 @@ nav ul li {
   top: 200px;
 }
 
-span {
-  color: teal;
-  font-weight: bold;
-}
-
+/* Single card/post */
 .card {
   display: inline-block;
   border: 2px solid var(--colorLightGreen)
@@ -107,8 +116,9 @@ span {
   color: var(--colorDark);
 }
 
+/* New post form*/
 .newPost div {
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .newPost label {
@@ -126,12 +136,16 @@ span {
 }
 
 /* SuccessMessage */
-
 .alert {
+  background-color: var(--colorLightGreen);
+  height: 30vh;
+  width: 30vw;
   position: fixed;
-  top: calc(20% + 120px);
-  background-color: var(--colorLightGreen)
-} 
+  top: 50%;
+  left: 50%;
+  margin-top: -15vh !important;
+  margin-left: -15vw !important;
+ } 
 
 .alert-heading {
   color: var(--colorDark);

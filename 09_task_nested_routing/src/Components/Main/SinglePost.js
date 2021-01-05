@@ -28,7 +28,6 @@ const SinglePost = () => {
 			<div>
 				{post.title} {post.author} {post.desc} {post.img} 
 			</div>
-
 		)
 	}
 

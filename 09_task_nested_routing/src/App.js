@@ -10,9 +10,11 @@ const App = () => {
   return (
     // Replace <div> with <Router>
     <Router>
-      <Header/> 
-      <Main/> 
-      <Footer/>
+      <div className="container">        
+        <Header/> 
+        <Main/>     
+        <Footer/>
+      </div>
     </Router>
   );
 };

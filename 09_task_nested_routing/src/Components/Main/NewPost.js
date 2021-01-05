@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Container, Button, Form } from 'react-bootstrap';
-import SuccessMessageModal from './SuccessMessageModal'
+import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -18,7 +18,7 @@ const NewPost = () => {
     });
   };
 
-  const [ successMessage, setSuccessMessage ] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(false);
 
   const addPostShowSucceess = (event) => {
     event.preventDefault();
@@ -84,7 +84,7 @@ const NewPost = () => {
           variant="outline-primary"
           type="submit">Submit new post       
         </Button>
-        {successMessage && <SuccessMessageModal />}       
+        {successMessage && <SuccessMessage />}       
       </Form>
     </Container>          
   );

@@ -1,10 +1,25 @@
-import React from 'react';
+// MODAL NOT USED IN APP
+
+import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-const SuccessMessageModal = ({onHide}) => {
+const SuccessMessageModal = ({}) => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => {
+    setShowModal(false);
+    window.location.reload();
+  }
   
+  const handleShow = () => {
+    setShowModal(true);
+  }
+    
     return (
       <Modal
+        show = {showModal}
+        onHide = {handleClose}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -23,30 +38,10 @@ const SuccessMessageModal = ({onHide}) => {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={onHide}>Close</Button>
+          <Button onClick={handleClose}>Close</Button>
         </Modal.Footer>
       </Modal>
     );
- 
-  
-  // function App() {
-  //   const [modalShow, setModalShow] = React.useState(false);
-  
-  //   return (
-  //     <>
-  //       <Button variant="primary" onClick={() => setModalShow(true)}>
-  //         Launch vertically centered modal
-  //       </Button>
-  
-  //       <MyVerticallyCenteredModal
-  //         show={modalShow}
-  //         onHide={() => setModalShow(false)}
-  //       />
-  //     </>
-  //   );
-  // }
-  
-  // render(<App />);
 };
 
 export default SuccessMessageModal;
