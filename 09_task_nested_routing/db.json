@@ -17,7 +17,7 @@
     {
       "title": "To all friends, near and far",
       "author": "Rudolf",
-      "desc": "Wanna wish y'all merry Christmas and see ou next year!",
+      "desc": "Wanna wish y'all merry Christmas and see you next year!",
       "img": "https://source.unsplash.com/sG2Eme9Ky8U",
       "id": 7
     },
@@ -36,11 +36,18 @@
       "id": 9
     },
     {
-      "title": "Hyvää uuttaa vuotta!",
+      "title": "Hyvää uutaa vuotta!",
       "author": "Vilma",
       "desc": "Kaikkea hyvää vuodelle 2021!",
       "img": "https://source.unsplash.com/1600x900/?flower",
       "id": 10
+    },
+    {
+      "title": "Relax!",
+      "author": "Minna",
+      "desc": "Let's try this in 2021 :)",
+      "img": "https://source.unsplash.com//514dv0uzWwk",
+      "id": 11
     }
   ]
 }
