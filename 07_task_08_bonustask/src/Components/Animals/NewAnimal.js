@@ -17,7 +17,7 @@ const AnimalCard = ({onChange, submit, aclass}) => {
 
   const closeHandler = () => {
     window.location.reload();
-  }tas
+  }
 
   return (
     <div>
